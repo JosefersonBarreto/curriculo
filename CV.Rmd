@@ -1,0 +1,162 @@
+---
+name: Joseferson
+surname: Barreto
+position: "Cientista de Dados"
+address: "Casinhas"
+profilepic: "./img/me.png"
+www: "josefersonbarreto.github.io/portifolio"
+email: "joseferson7@gmail.com"
+github: JosefersonBarreto
+linkedin: joseferson-barreto
+orcid: 55755-000
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 990000
+# headcolor: 00008b
+# color: 00008b
+aboutme: "Tenho mais de três anos de experiência em análise de dados e programação em linguagens como R, Python
+e T‑SQL. Atuei como analista de dados por um ano e meio no PROCON Municipal de Campina Grande, PB.
+Tenho uma paixão profunda por programação, automação e inteligência artificial. Inclusive, este currículo
+foi feito com código."
+docname: CV
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+            )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+source(file = here("r","data.r"))
+
+```
+
+# Trabalhos
+
+```{r EMPLOYMENT}
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Educação
+
+```{r EDUCATION}
+
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Habilidades
+
+```{r SKILLS}
+
+skills %>%
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+
+```
+
+<!-- # Honors -->
+
+<!-- ```{r HONORS} -->
+
+<!-- honors %>% -->
+<!--   detailed_entries( -->
+<!--     with = area, -->
+<!--     what = accomplishment, -->
+<!--     why = detail, -->
+<!--     when = year, -->
+<!--     where = where -->
+<!--   ) -->
+
+<!-- ``` -->
+
+# Projetos
+
+```{r PROJECTS}
+
+projects %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+<!-- # Works -->
+
+<!-- ```{r WORKS} -->
+
+<!-- works %>% -->
+<!--   detailed_entries( -->
+<!--     with = area, -->
+<!--     what = accomplishment, -->
+<!--     why = detail, -->
+<!--     when = year, -->
+<!--     where = where -->
+<!--   ) -->
+
+<!-- ``` -->
+
+\pagebreak
+
+# Certifications
+
+```{r CERTIFICATIONS}
+
+certifications %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+
+# Idiomas 
+
+
+
+```{r idiom}
+
+idiom %>%
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+
+```
