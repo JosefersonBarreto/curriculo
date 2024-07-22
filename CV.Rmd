@@ -2,13 +2,16 @@
 name: Joseferson
 surname: Barreto
 position: "Cientista de Dados"
-address: "Casinhas"
+#position: "Estatístico"
+address: "Campina Grande"
 profilepic: "./img/me.png"
 www: "josefersonbarreto.github.io/portifolio"
 email: "joseferson7@gmail.com"
 github: JosefersonBarreto
 linkedin: joseferson-barreto
-orcid: 55755-000
+orcid: 58429-515
+Phone: "+5581981307467"
+social mídia: "+55819813977467"
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 990000
 # headcolor: 00008b
@@ -36,10 +39,19 @@ packages <- c('vitae'     # The CV's LaTeX Template
              ,'glue'      # String Manipulation
             )
 
+
+# tinytex::parse_install("CV.log")
+
+
+
 xfun::pkg_attach2(packages, message = FALSE)
 
 source(file = here("r","data.r"))
 
+```
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
 ```
 
 # Trabalhos
@@ -72,7 +84,7 @@ edu %>%
 
 ```
 
-# Habilidades
+# Soft Skills 
 
 ```{r SKILLS}
 
@@ -84,6 +96,20 @@ skills %>%
 
 ```
 
+
+
+
+# Hard  Skills 
+
+```{r SKILLS2}
+
+skills2 %>%
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+
+```
 <!-- # Honors -->
 
 <!-- ```{r HONORS} -->
@@ -114,6 +140,27 @@ projects %>%
 
 ```
 
+
+
+\pagebreak
+
+
+
+# Palestras Apresentadas 
+
+```{r palest}
+
+palest %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
 <!-- # Works -->
 
 <!-- ```{r WORKS} -->
@@ -129,7 +176,6 @@ projects %>%
 
 <!-- ``` -->
 
-\pagebreak
 
 # Certifications
 

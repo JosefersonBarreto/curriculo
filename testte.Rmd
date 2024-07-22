@@ -1,0 +1,75 @@
+---
+#title: "Meu Título"
+output:
+  html_document:
+    theme: flatly
+    # number_sections: yes
+    # toc: false
+    # highlight: tango
+---
+
+  <style>
+    .title-section {
+      position: relative;
+      background-image: url("img/me.png");  /* Substitua com o caminho para sua nova imagem */
+      background-repeat: no-repeat;
+      background-position: center; /* Centraliza a imagem vertical e horizontalmente */
+      height: 75vh; /* 75% da altura da viewport */
+      width: 160%; /* Largura desejada da .title-section */
+      margin: auto; /* Centraliza a .title-section na horizontal */
+      text-align: center;
+      color: white;
+      padding-bottom: 20px; /* Adiciona espaço entre .title-section e o restante do conteúdo */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* Alinha o conteúdo na parte superior da .title-section */
+    }
+    
+    h1 {
+      margin-bottom: 0; /* Mantém o título no topo da .title-section */
+    }
+    
+    .text-left,
+    .text-right {
+      position: absolute;
+      color: white;
+      font-size: 14px;
+      margin: 8px;
+    }
+    
+    .text-left {
+      bottom: 0;
+      left: 0;
+    }
+    
+    .text-right {
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -32,11 +32,22 @@ certifications <- tribble(
 
 skills <- tribble(
     ~area, ~skills,
-    "Linguagens de Programação", "DAX, PYTHON, R, T‑SQL, PL‑SQL, VBA",
-    "Linguagens de Marcação", "CSS, HTML, LATEX, MARKDOWN, RMARKDOWN, SASS",
-    "Análise Estatística, modelagem de dados, processamento de dados", "Desenvolvimento e implementação de paineis analíticos",
-    "Controle de Versão", "Git",
-    "Microsoft Office", "Excel, Outlook, Power BI, Power Point, Word"
+    "COMUNICAÇÃO", "Sou capaz de transmitir insights técnicos para públicos não técnicos, utilizando exemplos claros e visualizações de dados para facilitar a compreensão.",
+    "Trabalho em equipe", "Consigo colaborar com colegas de diferentes departamentos, como engenheiros de software, gerentes de produto e especialistas de marketing, para trabalhar em projetos interdisciplinares.",
+    "Pensamento Analítico","Tenho uma abordagem lógica para resolver problemas e uso técnicas estatísticas para identificar padrões e insights úteis.",
+    "Gerenciamento de Projetos", "Sei gerenciar tempo e priorizar tarefas para cumprir prazos e objetivos do projeto.",
+)
+
+
+
+
+skills2 <- tribble(
+  ~area, ~skills,
+  "Linguagens de Programação", "DAX, PYTHON, R, T‑SQL, PL‑SQL, VBA",
+  "Linguagens de Marcação", "CSS, HTML, LATEX, MARKDOWN, RMARKDOWN, SASS",
+  "Análise Estatística, modelagem de dados, processamento de dados", "Desenvolvimento e implementação de paineis analíticos",
+  "Controle de Versão", "Git",
+  "Microsoft Office", "Excel, Outlook, Power BI, Power Point, Word"
 )
 
 honors <- tribble(
@@ -89,6 +100,17 @@ works <- tribble(
 )
 
 
+
+
+palest <- tribble(
+  ~area, ~accomplishment, ~year, ~where, ~detail,
+  "minicurso intitulado GitHub -  Grupo de Pesquisa Estatística Aplicada e Computacional", "UNIVERSIDADE ESTADUAL DA PARAÍBA", 2022, "Palestrante", "Neste Mini curso foi abordade  uma introdução com funciona o GitHub, e quais os principais comandos da ferramenta",
+  
+
+  "Curso Avançado de Quarto: Potencializando a Documentação Científica com Inovação e Simplicidade", "UNIVERSIDADE FEDERAL DE LAVRAS", 2024, "Palestrante", " Neste curso foi abordado as principais funcionalidades do pacote além de compara-lo ao Rmarkdown, explicando suas possíveis vantagens e desvantagens."
+  
+  
+)
 
 
 
